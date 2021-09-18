@@ -19,10 +19,10 @@ export default function Home({ posts }) {
   return (
     <>
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
-      <div className="divide-y divide-gray-200 dark:divide-gray-700">
-        <div className="pt-6 pb-8 space-y-2 md:space-y-5">
-          <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
-            Latest
+      <div className="divide-y divide-gray-200 dark:divide-gray-700 ">
+        <div className="pt-5 pb-8 space-y-2 md:space-y-5 text-center max-w-lg m-auto">
+          <h1 className="text-3xl font-semibold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-4xl md:leading-14">
+            Luis Miguel
           </h1>
           <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
             {siteMetadata.description}
@@ -35,17 +35,17 @@ export default function Home({ posts }) {
             return (
               <li key={slug} className="py-12">
                 <article>
-                  <div className="space-y-2 xl:grid xl:grid-cols-4 xl:space-y-0 xl:items-baseline">
+                  <div className="space-y-2 xl:grid xl:grid-cols-3 xl:space-y-0 xl:items-baseline">
                     <dl>
                       <dt className="sr-only">Published on</dt>
-                      <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
+                      <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400 ">
                         <time dateTime={date}>{formatDate(date)}</time>
                       </dd>
                     </dl>
                     <div className="space-y-5 xl:col-span-3">
-                      <div className="space-y-6">
+                      <div className="space-y-2">
                         <div>
-                          <h2 className="text-2xl font-bold leading-8 tracking-tight">
+                          <h2 className="text-1xl font-bold leading-8 tracking-tight">
                             <Link
                               href={`/blog/${slug}`}
                               className="text-gray-900 dark:text-gray-100"
